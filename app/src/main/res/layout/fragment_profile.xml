@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.ProfileFragment">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:background="@color/black"
+        >
+        <!-- TODO: Update blank fragment layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/auth_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="@dimen/dimen_5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:background="@color/yellow"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/yellow"
+                    android:gravity="center"
+                    android:text="PROFILE"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:textColor="@color/yellow"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FULL NAME:"
+                    android:textColor="@color/text_field_hint_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SAMUEL WIZ"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EMAIL ADDRESS:"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:textColor="@color/text_field_hint_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SAM@WIZ.COM"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+
+                <LinearLayout
+                    android:id="@+id/switch_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/two_fa_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 FACTOR AUTHENTICATION"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:text="EDIT PROFILE"
+                    android:textAllCaps="true"
+                    android:gravity="left|center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/switch_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/switch_layout"
+                    app:strokeColor="@color/btn_color"
+                    app:strokeWidth="@dimen/dimen_1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/view_accounts"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="VIEW ACCOUNTS "
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/switch_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_profile"
+                    app:strokeColor="@color/btn_color"
+                    app:strokeWidth="@dimen/dimen_1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/view_categories"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="VIEW CATEGORIES  "
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/switch_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/view_accounts"
+                    app:strokeColor="@color/btn_color"
+                    app:strokeWidth="@dimen/dimen_1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/connected_banks"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="CONNECTED BANKS  "
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/switch_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/view_categories"
+                    app:strokeColor="@color/btn_color"
+                    app:strokeWidth="@dimen/dimen_1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/change_password"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="CHANGE PASSWORD"
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/switch_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/connected_banks"
+                    app:strokeColor="@color/btn_color"
+                    app:strokeWidth="@dimen/dimen_1dp" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/log_out"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="LOG OUT"
+                    android:textAllCaps="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/switch_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/change_password"
+                    app:strokeColor="@color/btn_color"
+                    app:strokeWidth="@dimen/dimen_1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/delete_account"
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="DELETE MY ACCOUNT"
+                    android:textAllCaps="true"
+                    android:textColor="@color/red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/switch_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/log_out"
+                    app:strokeColor="@color/btn_color"
+                    app:strokeWidth="@dimen/dimen_1dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

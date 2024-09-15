@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.AssetsBottomDialogFragment">
+
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="NEW INVESTMENT"
+                android:textColor="@color/yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cancel_dialog"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:src="@drawable/cancel"
+                app:layout_constraintBottom_toBottomOf="@+id/textView23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView23" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dialog_bg_color"
+            android:padding="@dimen/margin_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/product_name_fragment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/text_field_hint_color"
+                android:hint="TITLE"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/text_field_hint_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/category_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/product_name_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/product_name_fragment">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:src="@drawable/home" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputChooseCategory"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:hint="CHOOSE TYPE"
+                    android:textColorHint="@android:color/white"
+                    app:endIconDrawable="@drawable/keyboard_arrow_down"
+                    app:endIconTint="@color/white"
+                    app:errorEnabled="true"
+                    app:errorTextColor="@color/error_color"
+                    app:hintEnabled="true">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/choose_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusable="false"
+                        android:gravity="center_vertical"
+                        android:inputType="none"
+                        android:textColor="@android:color/background_dark"
+                        android:textCursorDrawable="@color/black"
+                        app:backgroundTint="@color/text_field_hint_color" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/principal_amount_fragment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/text_field_hint_color"
+                android:hint="PRINCIPAL AMOUNT"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/product_name_fragment"
+                app:layout_constraintStart_toStartOf="@+id/product_name_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/category_fragment">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/text_field_hint_color"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recurring_amount_fragment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/text_field_hint_color"
+                android:hint="RECURRING  AMOUNT (+/-)"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/principal_amount_fragment"
+                app:layout_constraintStart_toStartOf="@+id/principal_amount_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/principal_amount_fragment">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/recurring_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/text_field_hint_color"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/recurring_tenor_fragment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/text_field_hint_color"
+                android:hint="RECURRING TENOR"
+                android:textColorHint="@android:color/white"
+                app:endIconDrawable="@drawable/keyboard_arrow_down"
+                app:endIconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/product_name_fragment"
+                app:layout_constraintStart_toStartOf="@+id/product_name_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/recurring_amount_fragment">
+
+                <AutoCompleteTextView
+                    android:id="@+id/recurring_tenor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/text_field_hint_color"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/due_date_fragment"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/text_field_hint_color"
+                android:hint="DUE DATE"
+                android:textColorHint="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/product_name_fragment"
+                app:layout_constraintStart_toStartOf="@+id/product_name_fragment"
+                app:layout_constraintTop_toBottomOf="@+id/recurring_tenor_fragment">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/due_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/text_field_hint_color"
+                    android:focusable="false"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/target_add_button"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/new_save_bg"
+                android:gravity="center"
+                android:text="SAVE"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/due_date_fragment" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

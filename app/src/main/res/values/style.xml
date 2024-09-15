@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="onBoarding_button">
+        <item name="borderWidth">@dimen/dimen_4dp</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="android:layout_marginTop">50dp</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
+    </style>
+
+    <style name="get_started_button">
+        <item name="borderWidth">@dimen/dimen_4dp</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="backgroundTint">@color/background_color</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="strokeWidth">@dimen/dimen_1dp</item>
+        <item name="android:layout_marginTop">@dimen/dimen_5dp</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
+    </style>
+    <style name="get_savings_button">
+        <item name="borderWidth">@dimen/dimen_4dp</item>
+        <item name="strokeColor">@color/yellow</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/yellow</item>
+        <item name="strokeWidth">@dimen/dimen_1dp</item>
+        <item name="android:layout_marginTop">@dimen/dimen_5dp</item>
+        <item name="android:layout_marginBottom">@dimen/dimen_10dp</item>
+    </style>
+
+        <!-- Custom DatePickerDialog Theme -->
+        <style name="BlackDatePickerDialog" parent="Theme.AppCompat.Light.Dialog">
+            <!-- Customize the primary color, background, and text color -->
+            <item name="colorAccent">@color/yellow</item> <!-- Black Accent Color -->
+            <item name="android:textColorPrimary">#FFFFFF</item> <!-- White Text Color -->
+            <item name="android:background">#000000</item> <!-- Black Background -->
+        </style>
+
+    <!-- Custom style for TextInputLayout with yellow underline and black background -->
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="boxBackgroundColor">@color/black</item>
+        <item name="boxStrokeColor">@color/yellow</item>
+        <item name="hintTextColor">@color/text_field_hint_color</item>
+
+    </style>
+
+
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gettingStartedFragment">
+    <fragment
+        android:id="@+id/gettingStartedFragment"
+        android:name="com.twoam.valucit.ui.fragment.GettingStartedFragment"
+        android:label="GettingStartedFragment" >
+        <action
+            android:id="@+id/action_gettingStartedFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_gettingStartedFragment_to_loginFragment3"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.twoam.valucit.ui.fragment.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment2"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.twoam.valucit.ui.fragment.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_incomeAndInflowFragment"
+            app:destination="@id/incomeAndInflowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/investmentsFragment"
+        android:name="com.twoam.valucit.ui.fragment.InvestmentsFragment"
+        android:label="fragment_investments"
+        tools:layout="@layout/fragment_investments" >
+        <action
+            android:id="@+id/action_investmentsFragment_to_assetsBottomDialogFragment2"
+            app:destination="@id/assetsBottomDialogFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeAndInflowFragment"
+        android:name="com.twoam.valucit.ui.fragment.IncomeAndInflowFragment"
+        android:label="fragment_income_and_inflow"
+        tools:layout="@layout/fragment_income_and_inflow" >
+        <action
+            android:id="@+id/action_incomeAndInflowFragment_to_expensesAndBillsFragment"
+            app:destination="@id/expensesAndBillsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalsAndTargetsFragment"
+        android:name="com.twoam.valucit.ui.fragment.GoalsAndTargetsFragment"
+        android:label="fragment_goals_and_target"
+        tools:layout="@layout/fragment_goals_and_target" >
+        <action
+            android:id="@+id/action_goalsAndTargetsFragment_to_investmentsFragment"
+            app:destination="@id/investmentsFragment" />
+        <action
+            android:id="@+id/action_goalsAndTargetsFragment_to_goalsBottomDialogFragment2"
+            app:destination="@id/goalsBottomDialogFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="com.twoam.valucit.ui.fragment.ForgotFragment"
+        android:label="fragment_forgot"
+        tools:layout="@layout/fragment_forgot" >
+        <action
+            android:id="@+id/action_forgotFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_forgotFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/expensesAndBillsFragment"
+        android:name="com.twoam.valucit.ui.fragment.ExpensesAndBillsFragment"
+        android:label="fragment_expenses_and_bills"
+        tools:layout="@layout/fragment_expenses_and_bills" >
+        <action
+            android:id="@+id/action_expensesAndBillsFragment_to_goalsAndTargetsFragment"
+            app:destination="@id/goalsAndTargetsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/goalsBottomDialogFragment2"
+        android:name="com.twoam.valucit.ui.fragment.GoalsBottomDialogFragment"
+        android:label="fragment_goals_bottom_dialog"
+        tools:layout="@layout/fragment_goals_bottom_dialog" />
+    <dialog
+        android:id="@+id/assetsBottomDialogFragment2"
+        android:name="com.twoam.valucit.ui.fragment.AssetsBottomDialogFragment"
+        android:label="fragment_assets_bottom_dialog"
+        tools:layout="@layout/fragment_assets_bottom_dialog" />
+</navigation>

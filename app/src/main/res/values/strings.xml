@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Valucit</string>
+    <string name="skip">Skip</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Enter your email</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="enter_dob">Enter your DOB</string>
+    <string name="enter_confirm_password">Confirm password</string>
+    <string name="forgot_password">Forgot password</string>
+    <string name="close_icon">Close icon</string>
+    <string name="version_1_0">1.0</string>
+    <string name="login">LOGIN</string>
+    <string name="get_valucit">GET VALUCIT</string>
+    <string name="m_s_clydebank"><![CDATA[M & S, CLYDEBANK]]></string>
+    <string name="regular_expenses_bills"><![CDATA[REGULAR EXPENSES & BILLS]]></string>
+    <string name="regular_income_ninflows"><![CDATA[REGULAR INCOME & \nINFLOWS]]></string>
+    <string name="goals_amp_targets"><![CDATA[GOALS & TARGETS]]></string>
+    <string name="which_country_do_you_live_in">Which country do you live in?</string>
+    <string name="which_currency_do_you_bank_in">Which currency do you bank in?</string>
+    <string name="what_is_your_email_address">What is your email address?</string>
+    <string name="when_were_you_born">When were you born?</string>
+    <string name="what_is_your_surname">What is your surname?</string>
+    <string name="what_is_your_first_name">What is your first name?</string>
+    <string name="hello_i_am_valucit">Hello, I am Valucit 😊</string>
+</resources>

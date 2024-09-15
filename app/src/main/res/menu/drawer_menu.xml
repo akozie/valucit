@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/wallet"
+        android:title="Wallet" />
+
+    <item
+        android:id="@+id/notification"
+        android:title="Notifications"/>
+
+    <item
+        android:id="@+id/savings"
+        android:title="Savings" />
+    <item
+        android:id="@+id/account"
+        android:title="Account" />
+
+</menu>
